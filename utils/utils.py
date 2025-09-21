@@ -62,9 +62,9 @@ async def read_ips_file(message):
     try:
         await bot.download(
             message.document,
-            destination=f"/Users/harms/develop/py/telegramBot_HelperPool/downloads/{message.document.file_id}.ips"
+            destination=f"downloads/{message.document.file_id}.ips"
         )
-        with open(f"/Users/harms/develop/py/telegramBot_HelperPool/downloads/{message.document.file_id}.ips", 'r') as downloaded_file:
+        with open(f"downloads/{message.document.file_id}.ips", 'r') as downloaded_file:
             file_content_lines = downloaded_file.readlines()
         
         panicFull = {}
